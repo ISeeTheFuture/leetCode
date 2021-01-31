@@ -8,7 +8,7 @@
             "name": "(Windows) 시작",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/210123.exe",
+            "program": "${workspaceFolder}/src/tmp.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",

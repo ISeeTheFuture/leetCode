@@ -47,17 +47,22 @@ public:
  */
 class Solution {
 public:
-	bool chkBST(TreeNode* node, int min, int max) {
-		if(node == NULL) { return true; }
-		if(min < node->val && node->val < max) {
-			return chkBST(node->left, min, node->val)&&chkBST(node->right, node->val, max);
-		} else { return false; }
+	bool chkBST(TreeNode* node, long min, long max) {
+		if(node == NULL) { return true; } // 노드가 비었으면 즉시 true 리턴해 위로 올라간다.
+		/*
+		 * 만약 트리를 왼쪽으로만 내려간다고 하면, max의 값은 LONG_MAX에서 변함이 없을 것이다. 반대도 마찬가지.
+		 * 만약 트리를 왼쪽으로 타다 오른쪽으로 탄다면?
+		 * 방금 갖고온 오른쪽 부모값 < node->val < 이제까지 갖고 내려온 왼쪽 최대값
+		 * 지금은 이해되는것 같은데, 나중에 다시보면 이해가 될까 싶다..
+		 */
+		if(min >= node->val || node->val >= max) { return false; } // 노드의 값이 이제껏 갖고 내려온 최대값보다 크거나 최소값보다 작으면 즉시 false 리턴.
+		return chkBST(node->left, min, node->val)&&chkBST(node->right, node->val, max); // 이제 하위 노드로 다시 잠수.
 	}
 	bool isValidBST(TreeNode* root) {
-		return chkBST(root, INT_MIN, INT_MAX);
+		return chkBST(root, LONG_MIN, LONG_MAX);
     }
+	// 후기 : 더이상 생각하면 머리에 쥐나겠다. 이것만 네시간 푼듯.
 };
-
 // Driver code 
 int main() {
 	Solution sol;

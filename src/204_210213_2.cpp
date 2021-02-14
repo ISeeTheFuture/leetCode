@@ -4,8 +4,6 @@ https://leetcode.com/explore/interview/card/top-interview-questions-easy/102/mat
 */
 
 #include <iostream>
-#include <algorithm>
-#include <vector>
 
 using namespace std;
 

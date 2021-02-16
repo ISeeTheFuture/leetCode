@@ -1,8 +1,24 @@
 # leetCode
 
+2021/02/15 ~ 2021/02/21 풀 문제
+
+Easy
+
+100번, Tree, Same Tree
+
+107번, Tree, Binary Tree Level Order Traversal II
+
+110번, Balanced Binary Tree
+
+Medium
+
+103번, Tree, Binary Tree Zigzag Level Order Traversal
+
+105번, Tree, Construct Binary Tree from Preorder and Inorder Traversal
 
 메모 : 204 DP 적용되는지 확인
 
+--------------------------------------------------------------------------------------------------------
 
 일지
 

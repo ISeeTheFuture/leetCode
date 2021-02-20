@@ -6,8 +6,6 @@ Easy
 
 100번, Tree, Same Tree
 
-107번, Tree, Binary Tree Level Order Traversal II
-
 110번, Tree, Balanced Binary Tree
 
 Medium
@@ -16,7 +14,9 @@ Medium
 
 105번, Tree, Construct Binary Tree from Preorder and Inorder Traversal
 
-메모 : 204 DP 적용되는지 확인
+107번, Tree, Binary Tree Level Order Traversal II
+
+메모 : 204번, DP 적용되는지 확인 필요. 102,103번은 더 효율적인 풀이 필요
 
 --------------------------------------------------------------------------------------------------------
 

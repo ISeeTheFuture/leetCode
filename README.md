@@ -8,7 +8,7 @@ Easy
 
 107번, Tree, Binary Tree Level Order Traversal II
 
-110번, Balanced Binary Tree
+110번, Tree, Balanced Binary Tree
 
 Medium
 
@@ -21,6 +21,12 @@ Medium
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/02/19 (토) : (예정) 107번, 110번
+
+2021/02/19 (금) : 103번(Tree : Binary Tree Zigzag Level Order Traversal)
+
+2021/02/18 (목) : 100번(Tree : Same Tree)
 
 2021/02/14 (일) : 108번(Tree : Convert Sorted Array to Binary Search Tree), 326번(Math : Power of Three);
 

@@ -16,13 +16,15 @@ Medium
 
 107번, Tree, Binary Tree Level Order Traversal II
 
-메모 : 204번, DP 적용되는지 확인 필요. 102,103번은 더 효율적인 풀이 필요
+메모 : 204번, DP 적용되는지 확인 필요. 102,103, 107번은 더 효율적인 풀이 필요
 
 --------------------------------------------------------------------------------------------------------
 
 일지
 
-2021/02/19 (토) : (예정) 107번, 110번
+2021/02/21 (일) : (예정) 105번(Tree : Construct Binary Tree from Preorder and Inorder Traversal)
+
+2021/02/20 (토) : 107번(Tree : Binary Tree Level Order Traversal II), 110번(Tree : Balanced Binary Tree) **참고 : 102, 103, 107은 유사한 문제. 그리고 성능 개선 필요**
 
 2021/02/19 (금) : 103번(Tree : Binary Tree Zigzag Level Order Traversal)
 

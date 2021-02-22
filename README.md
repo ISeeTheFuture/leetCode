@@ -1,20 +1,22 @@
 # leetCode
 
-2021/02/15 ~ 2021/02/21 풀 문제
+2021/02/22 ~ 2021/02/28 풀 문제
 
 Easy
 
-100번, Tree, Same Tree
+111번, Tree, Minimum Depth of Binary Tree
 
-110번, Tree, Balanced Binary Tree
+21번, Linked List, Merge Two Sorted Lists
+
+237번, Linked List, Delete Node in a Linked List
 
 Medium
 
-103번, Tree, Binary Tree Zigzag Level Order Traversal
+106번, Construct Binary Tree from Inorder and Postorder Traversal
 
-105번, Tree, Construct Binary Tree from Preorder and Inorder Traversal
+2번, Linked List, Add Two Numbers
 
-107번, Tree, Binary Tree Level Order Traversal II
+--------------------------------------------------------------------------------------------------------
 
 메모 : 204번, DP 적용되는지 확인 필요. 102,103, 107번은 더 효율적인 풀이 필요.
 

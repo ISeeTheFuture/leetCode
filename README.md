@@ -1,6 +1,9 @@
 # leetCode
 
-2021/02/22 ~ 2021/02/28 풀 문제
+
+**토이 프로젝트 집중으로 한 주 건너뜀.**
+
+2021/03/01 ~ 2021/03/07 풀 문제
 
 Easy
 
@@ -8,7 +11,6 @@ Easy
 
 21번, Linked List, Merge Two Sorted Lists
 
-237번, Linked List, Delete Node in a Linked List
 
 Medium
 
@@ -23,6 +25,8 @@ Medium
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/02/26 (금) : 237번(LinkedList : Delete Node in a Linked List)
 
 2021/02/21 (일) : 105번(Tree : Construct Binary Tree from Preorder and Inorder Traversal) **map으로는 어떻게 푸는 건지 따라가보자.**
 

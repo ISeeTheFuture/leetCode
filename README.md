@@ -26,6 +26,8 @@ Medium
 
 일지
 
+2021/03/04 (목) : 21번(LinkedList : Merge Two Sorted Lists)
+
 2021/02/26 (금) : 237번(LinkedList : Delete Node in a Linked List)
 
 2021/02/21 (일) : 105번(Tree : Construct Binary Tree from Preorder and Inorder Traversal) **map으로는 어떻게 푸는 건지 따라가보자.**

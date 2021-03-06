@@ -5,13 +5,6 @@
 
 2021/03/01 ~ 2021/03/07 풀 문제
 
-Easy
-
-111번, Tree, Minimum Depth of Binary Tree
-
-21번, Linked List, Merge Two Sorted Lists
-
-
 Medium
 
 106번, Construct Binary Tree from Inorder and Postorder Traversal
@@ -25,6 +18,8 @@ Medium
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/03/06 (토) : 111번(Tree : Minimum Depth of Binary Treesss)
 
 2021/03/04 (목) : 21번(LinkedList : Merge Two Sorted Lists)
 

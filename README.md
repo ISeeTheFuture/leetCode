@@ -1,17 +1,19 @@
 # leetCode
 
 
-**토이 프로젝트 집중으로 한 주 건너뜀.**
+2021/03/08 ~ 2021/03/14 풀 문제
 
-2021/03/01 ~ 2021/03/07 풀 문제
+Easy
 
-Medium
+14번, String : Longest Common Prefix
 
-1번, Two Sum
+20번, String, Stack : Valid Parentheses
 
-9번, Palindrome Number
+27번, Array, Two Pointers : Remove Element
 
-13번, Roman to Integer
+28번, String, Two Pointers : Implement strStr()
+
+29번, Search Insert Position
 
 --------------------------------------------------------------------------------------------------------
 
@@ -22,6 +24,8 @@ Medium
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/03/07 (일) : 1번(Array : Two Sum), 9번(Math : Two Sum), 13번(Math : numTwo Sum)
 
 2021/03/06 (토) : 111번(Tree : Minimum Depth of Binary Treesss)
 

@@ -13,7 +13,7 @@ Easy
 
 28번, String, Two Pointers : Implement strStr()
 
-29번, Search Insert Position
+35번, Search Insert Position
 
 --------------------------------------------------------------------------------------------------------
 
@@ -25,7 +25,9 @@ Easy
 
 일지
 
-2021/03/13 (토) : 20번(String, Stack : Valid Parentheses)
+2021/03/14 (일) : 
+
+2021/03/13 (토) : 20번(String, Stack : Valid Parentheses), 27번(Array, Two Pointers : Remove Element)
 
 2021/03/11 (목) : 14번(String, Longest Common Prefix)
 

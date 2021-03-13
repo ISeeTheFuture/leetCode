@@ -25,6 +25,8 @@ Easy
 
 일지
 
+2021/03/11 (목) : 14번(String, Longest Common Prefix)
+
 2021/03/07 (일) : 1번(Array : Two Sum), 9번(Math : Two Sum), 13번(Math : numTwo Sum)
 
 2021/03/06 (토) : 111번(Tree : Minimum Depth of Binary Treesss)

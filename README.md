@@ -13,7 +13,7 @@ Easy
 
 28번, String, Two Pointers : Implement strStr()
 
-35번, Search Insert Position
+35번, Array, Binary Search : Search Insert Position
 
 --------------------------------------------------------------------------------------------------------
 

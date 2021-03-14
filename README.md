@@ -1,19 +1,10 @@
 # leetCode
 
 
-2021/03/08 ~ 2021/03/14 풀 문제
+2021/03/15 ~ 2021/03/21 풀 문제
 
 Easy
 
-14번, String : Longest Common Prefix
-
-20번, String, Stack : Valid Parentheses
-
-27번, Array, Two Pointers : Remove Element
-
-28번, String, Two Pointers : Implement strStr()
-
-35번, Array, Binary Search : Search Insert Position
 
 --------------------------------------------------------------------------------------------------------
 
@@ -21,11 +12,13 @@ Easy
 
 메모2 : 당분간 easy 위주로 풀이. Medium에 들어가는 시간이 너무 많다ㅠ
 
+메모3 : 20210315(월)부터는 5문제 대신 4문제 풀자. 프로젝트할 시간이 부족하다.
+
 --------------------------------------------------------------------------------------------------------
 
 일지
 
-2021/03/14 (일) : 
+2021/03/14 (일) : 28번(String, Two Pointers : Implement strStr()), 35번(Array, Binary Search : Search Insert Position)
 
 2021/03/13 (토) : 20번(String, Stack : Valid Parentheses), 27번(Array, Two Pointers : Remove Element)
 

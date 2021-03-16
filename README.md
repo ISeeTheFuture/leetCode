@@ -5,6 +5,13 @@
 
 Easy
 
+53번(Array, Divide and conquer, Dynamic Programming : Maximum Subarray) 
+
+58번(String : Length of Last Word)
+
+66번(Array : Plus One)
+
+67번(Math, Two Pointers, String : Add Binary)
 
 --------------------------------------------------------------------------------------------------------
 

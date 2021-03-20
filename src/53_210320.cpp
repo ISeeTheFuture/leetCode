@@ -30,6 +30,9 @@ public:
     }
 };
 
+// 후기 : 알고 있던 알고리즘이었다.
+// https://www.youtube.com/watch?v=86CQq3pKSUw&t=45s&ab_channel=CSDojo
+
 // Driver code 
 int main() {
 	Solution sol;

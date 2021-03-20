@@ -18,9 +18,9 @@ public:
     int maxSubArray(vector<int>& nums) {
 		int maxSum = nums[0];
 		int tmpSum = nums[0];
-		for(int i = 1; i < nums.size(); i++) { // 1부터 시작해야 size 1짜리 nums 무시.
+		for(int i = 1; i < nums.size(); i++) { // 1부터 시작해야 size 1짜리 nums 무시하며, idx 0은 이미 위에서 변수 초기화로 넣어주었다.
 			if(tmpSum < 0) { // 임시 합이 0 보다 작으면
-				tmpSum = nums[i]; // 다음 임시합은 그냥 현재 원소 하나로 초기화.
+				tmpSum = nums[i]; // 다음 임시합은 그냥 현재 원소 하나로 초기화. 음수는 더해봐야 무조건 손해.
 			} else {
 				tmpSum += nums[i]; // 양수라면 더해줘서 계산을 이어 나간다.
 			}

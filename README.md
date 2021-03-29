@@ -5,13 +5,13 @@
 
 Easy
 
-69번(Math, Binary Search : Sqrt(x))
+112번(Tree : Path Sum)
 
-70번(Dynamic Programming : Climbing Stairs)
+118번(Array : Pascal's Trangle)
 
-83번(Linked List : Remove Duplicates from Sorted List)
+119번(Array : Pascal's Trangle II)
 
-88번(Array, Two Pointers : Merge Sorted Array)
+121번(Array, Dynamic Programming : Best Time to Buy and Sell Stock)
 
 --------------------------------------------------------------------------------------------------------
 
@@ -24,6 +24,12 @@ Easy
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/03/27 (토) : 69번(Math, Binary Search : Sqrt(x)), 88번(Array, Two Pointers : Merge Sorted Array)
+
+2021/03/25 (목) : 83번(Linked List : Remove Duplicates from Sorted List)
+
+2021/03/23 (화) : 70번(Dynamic Programming : Climbing Stairs)
 
 2021/03/21 (일) : 58번(String : Length of Last Word)
 

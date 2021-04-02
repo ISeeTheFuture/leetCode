@@ -1,6 +1,6 @@
 /*
-  Merge Sorted Array
-https://leetcode.com/problems/merge-sorted-array/
+  Pascal's Triangle
+https://leetcode.com/problems/pascals-triangle/
 */
 
 #include <iostream>

@@ -42,6 +42,8 @@ public:
     }
 };
 
+// 후기 : 효율이 엄청 안나오네.. 다시 풀어야 할듯.
+
 // Driver code 
 int main() {
 	Solution sol;

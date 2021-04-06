@@ -5,13 +5,11 @@
 
 Easy
 
-112번(Tree : Path Sum)
+125번(String : Valid Palindrome)
 
-118번(Array : Pascal's Trangle)
+136번(Hash Table, Two Pointers, Bit Manipulation : Single Number)
 
-119번(Array : Pascal's Trangle II)
-
-121번(Array, Dynamic Programming : Best Time to Buy and Sell Stock)
+141번(Linked List : Linked List Cycle)
 
 --------------------------------------------------------------------------------------------------------
 
@@ -19,11 +17,19 @@ Easy
 
 메모2 : 당분간 easy 위주로 풀이. Medium에 들어가는 시간이 너무 많다ㅠ
 
-메모3 : 20210315(월)부터는 5문제 대신 4문제 풀자. 프로젝트할 시간이 부족하다.
+메모3 : 아 당분간 3문제. 할 게 더 늘어났다.
 
 --------------------------------------------------------------------------------------------------------
 
 일지
+
+2021/04/01 (일) : 118번(Array : Pascal's Trangle)
+
+2021/04/02 (토) : 119번(Array : Pascal's Trangle II)
+
+2021/04/03 (금) : 121번(Array, Dynamic Programming : Best Time to Buy and Sell Stock)
+
+2021/04/04 (목) : 112번(Tree : Path Sum)
 
 2021/03/27 (토) : 69번(Math, Binary Search : Sqrt(x)), 88번(Array, Two Pointers : Merge Sorted Array)
 

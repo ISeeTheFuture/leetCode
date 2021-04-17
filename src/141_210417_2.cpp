@@ -24,19 +24,23 @@ struct ListNode {
 class Solution {
 public:
     bool hasCycle(ListNode *head) {
+        if(!head || !head->next) {
+            return false;
+        }
         ListNode* redHead = head;
-        do {
-            if(head == NULL || redHead == NULL || redHead->next == NULL) { // redHead->next->next 할때 redHead->next가 NULL이면 죽어버린다.
-                return false;
-            }
+
+        while(redHead->next && redHead->next->next) {
+            redHead = redHead->next->next;
             head = head->next;
-            redHead = redHead->next->next; // 빨간색은 세 ㅂ...아니 두 배 빠르다!
-        } while(redHead != head); // 만날때까지 돌린다. 못만나면? 둘은 운명이 아닌거겠지....?ㅠㅠ
-        return true;
+            if(head == redHead) {
+                return true;
+            }
+        }
+        return false;
     }
 };
 
-// 이해하기는 이게 더 쉬운데, 같은 원리지만 효율 더 잘나오는걸로 한 번더 풀자
+// 이전보다 검사를 덜하니 속도가 더 빠를 줄 알았는데, 똑같다. 별 보람 없구만.
 
 // Driver code 
 int main() {

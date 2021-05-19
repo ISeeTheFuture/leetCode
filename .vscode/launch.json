@@ -5,17 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "g++ - 활성 파일 빌드 및 디버그",
+            "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/src/69_210327",
-            "args": [],
-            "stopAtEntry": false,
+            "program": "${workspaceFolder}/bin/a_exe",
             "cwd": "${workspaceFolder}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++: g++ 활성 파일 빌드"
+            "miDebuggerPath": "/usr/bin/gdb"
         }
     ]
 }

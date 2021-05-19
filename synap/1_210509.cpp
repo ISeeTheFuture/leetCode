@@ -27,6 +27,7 @@
  * 3    /   2
  * 9    /   2, 4, 8
  * 10   /   3, 9
+ * 21   /   2, 4, 5, 10, 20
  * 26   /   5, 25
  * 30   /   29
  * 
@@ -34,7 +35,121 @@
  * 
  * 답은 아는데 풀이를 모르겠네...
  * 
- * 답은 "입력 - 1" 과 그 수의 최소공배수이다. 하지만 왜 그런지 설명을 못하면 푼게 아니지..
+ * 답은 "입력 - 1" 과 그 수의 약수이다. 왠지는 모르겠다..
  * 
- * 먼저 "입력 - 1"이 해당 진법에서 각 자릿수 합과 무슨 관계인지 생각해보고. 그 다음 최소공배수 생각해보자.
  */
+
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+class Solution {
+
+private:
+    /**
+     * 약수를 구한다
+     * @param src 약수를 구할 수
+     * @return 구한 약수를 vector로 리턴.
+     */
+    std::vector<int> get_divisor(const int src) {
+        std::vector<int> ret;
+        for(int i = 1; i*i <= src; i++) {
+            if(src % i == 0) {
+                ret.push_back(src/i);
+                if(i == 1) { // 1은 생략
+                    continue;
+                }
+                ret.push_back(i);
+            }
+        }
+        std::sort(ret.begin(), ret.end()); // 보기쉽게 오름차순 정렬
+        ret.erase(std::unique(ret.begin(), ret.end()), ret.end()); // 중복 요소 제거
+        return ret;
+    }
+    /**
+     * target과 multiple의 곱인 n의 각 자리수를 모두 더한다. 계산 과정은 base 진법으로 하나 더한 결과는 편의상 10진수이다.
+     * @param target
+     * @param multiple  곱할 배수
+     * @param base      계산할 진법
+     * @return 각 자리수의 합(10진수)
+     */
+    long sum_digitsByMultiple(const int target, const int multiple, const int base) {
+        long n = (long)target * multiple;
+        long ret = 0;
+        while(n != 0) {
+            ret = ret + n%base;
+            n /= base;
+        }
+        return ret;
+    }
+    /**
+     * 구한 답을 검산한다. 진법*100의 미만 자리수(4자리수 미만)까지 검증한다.
+     * @param answer    구한 정답 vector
+     * @param base      진법
+     * @return 답이 맞다면 true, 틀리다면 false 리턴.
+     */
+    bool check_answer(std::vector<int> answer, const int base) {
+        for(std::vector<int>::iterator i = answer.begin(); i != answer.end(); i++) {
+            for(int j = 1; j < base*100; j++) {
+                long sum = sum_digitsByMultiple(*i, j, base);
+                if(sum < 0 || sum % *i != 0) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+public:
+    /**
+     * base진법에서 n의 배수의 각 자릿수의 합이 다시 n의 배수인 조건을 만족하는 n을 모두 구한다.
+     * @param base  답을 구할 진법
+     * @return 정답 vector
+     */
+    std::vector<int> get_digits(const int base) {
+        std::vector<int> ret = get_divisor(base - 1);
+
+        if(!check_answer(ret, base)) {
+            ret.clear();
+            std::cout << "something wrong."<< std::endl;
+        }
+
+        return ret;
+    }
+
+    /**
+     * 정답을 화면에 출력한다.
+     * @param src 출력할 정답 vector
+     */
+    void print_vector(const std::vector<int> src) {
+        if(src.empty()) {
+            std::cout << "there is nothing to print." << std::endl;
+            return;
+        }
+        
+        std::cout << "print : ";
+        for(const auto &target : src) {
+            std::cout << target << " ";
+        }
+        std::cout << std::endl;
+    }
+};
+
+// Driver code 
+int main() {
+    while (true) {
+	    Solution sol;
+	    int base = 0;
+        std::cout << "------------- start -------------" << std::endl;
+        std::cout << "please do not put the too big number has 6 or more digits." << std::endl;
+        std::cout << "input a number(3 ~ 4,634 (32bit)|| 3 ~ 30,370,004(64bit)) : " << std::endl;
+        std::cin >> base;
+        if(base <= 2) {
+            break;
+        }
+        std::vector<int> ret = sol.get_digits(base);
+        sol.print_vector(ret);
+        std::cout << "-------------- end --------------" << std::endl;
+    }
+	return 0;
+}

@@ -1,3 +1,3 @@
-#!/bin/bash
+#!/bin/zsh
 
-g++-10 -g -o ../bin/a_exe ../synap/1_210509.cpp
+g++ -g -o ../bin/a_exe ../synap/2_210606.cpp

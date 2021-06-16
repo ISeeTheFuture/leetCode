@@ -35,25 +35,26 @@ public:
     std::vector<std::string> solution(std::vector<std::vector<std::string> > tickets) {
         const int FROM_AIRPORT = 0;
         const int TO_AIRPORT = 1;
-        const int VISITED_NOTHING = -1;
+        const int VISITED_NOWHERE = -1;
 
         std::vector<std::string> ret;
         std::string target_airport = "ICN";
 
         ret.push_back(target_airport); // 일단 출발지는 집어 넣는다.
 
-        while(tickets.empty()) {
+        while(!tickets.empty()) {
             std::vector<std::vector<std::string> >::iterator tickets_iter = tickets.begin();
-            int target_index = VISITED_NOTHING;
+            int target_index = VISITED_NOWHERE;
 
             for(; tickets_iter < tickets.end(); tickets_iter++) {
                 
                 // 찾고 있는 공항을 발견했다면,
                 if(tickets_iter->at(FROM_AIRPORT) == target_airport) {
-                    const int CURRENT_INDEX = tickets_iter - tickets_iter->begin();
+                    const int CURRENT_INDEX = tickets_iter - tickets.begin();
 
-                    if(target_index == VISITED_NOTHING){
+                    if(target_index == VISITED_NOWHERE){
                         target_index = CURRENT_INDEX;
+                        
                     } else {
                         std::string stock_airport = tickets.at(target_index).at(TO_AIRPORT);
                         std::string new_airport = tickets.at(CURRENT_INDEX).at(TO_AIRPORT);
@@ -61,9 +62,9 @@ public:
                     }
                 }
             }
-
-            tickets.erase(tickets.begin() + target_index);
+            
             ret.push_back(tickets.at(target_index).at(TO_AIRPORT));
+            tickets.erase(tickets.begin() + target_index);
         }
 
         return ret;
@@ -74,6 +75,24 @@ public:
 // Driver code 
 int main() {
     Solution sol;
+    std::vector<std::vector<std::string> > tickets;
+    std::vector<std::string> ticket;
+    ticket.push_back("ICN");
+    ticket.push_back("JFK");
+    tickets.push_back(ticket);
+    ticket.clear();
+
+    ticket.push_back("HND");
+    ticket.push_back("IAD");
+    tickets.push_back(ticket);
+    ticket.clear();
+
+    ticket.push_back("JFK");
+    ticket.push_back("HND");
+    tickets.push_back(ticket);
+    ticket.clear();
+
+    sol.solution(tickets);
 
     return 0;
 }

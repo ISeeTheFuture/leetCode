@@ -49,7 +49,7 @@ public:
             for(; tickets_iter < tickets.end(); tickets_iter++) {
                 
                 // 찾고 있는 공항을 발견했다면,
-                if(tickets_iter->at(FROM_AIRPORT) == target_airport) {
+                if(tickets_iter->at(FROM_AIRPORT) == ret.back().c_str()) {
                     const int CURRENT_INDEX = tickets_iter - tickets.begin();
 
                     if(target_index == VISITED_NOWHERE){
@@ -58,7 +58,7 @@ public:
                     } else {
                         std::string stock_airport = tickets.at(target_index).at(TO_AIRPORT);
                         std::string new_airport = tickets.at(CURRENT_INDEX).at(TO_AIRPORT);
-                        target_index = stock_airport.compare(new_airport) == -1 ? target_index : CURRENT_INDEX; // 사전 순으로 더 앞쪽에 있는 것을 저장한다.
+                        target_index = stock_airport.compare(new_airport) < 0 ? target_index : CURRENT_INDEX; // 사전 순으로 더 앞쪽에 있는 것을 저장한다.
                     }
                 }
             }
@@ -75,22 +75,7 @@ public:
 // Driver code 
 int main() {
     Solution sol;
-    std::vector<std::vector<std::string> > tickets;
-    std::vector<std::string> ticket;
-    ticket.push_back("ICN");
-    ticket.push_back("JFK");
-    tickets.push_back(ticket);
-    ticket.clear();
-
-    ticket.push_back("HND");
-    ticket.push_back("IAD");
-    tickets.push_back(ticket);
-    ticket.clear();
-
-    ticket.push_back("JFK");
-    ticket.push_back("HND");
-    tickets.push_back(ticket);
-    ticket.clear();
+    std::vector<std::vector<std::string> > tickets = {{"ICN", "JFK"}, {"HND", "IAD"}, {"JFK", "HND"}};
 
     sol.solution(tickets);
 

@@ -152,7 +152,8 @@ public:
 // heapSort heap 구현 없이.
 public:
     void heapSort_simple(int* arr, int n) {
-        std::priority_queue<int> heap;
+        std::priority_queue<int, std::vector<int>, std::greater<int>> heap;
+        // std::priority_queue<int> heap; // (기본값)내림차순, 최대힙
         for(int i = 0; i < n; i++) {
             heap.push(arr[i]);
         }
@@ -180,7 +181,7 @@ public:
             }
 
             // 버킷에 있는 일부만 정렬된 데이터들을 다시 배열로 옮긴다.
-            for(int j, k = 0; j < BUCKET_DECIMAL; j++) {
+            for(int j = 0, k = 0; j < BUCKET_DECIMAL; j++) {
                 while(!buckets[j].empty()) {
                     arr[k++] = buckets[j].front();
                     buckets[j].pop();
@@ -202,6 +203,7 @@ int main() {
     const int SMALL_END_IDX = SMALL_ARRAY_SIZE - 1;
 
     int arr1[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("selection sort \n");
     ts.selectionSort(arr1, SMALL_ARRAY_SIZE);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr1[i]);
@@ -209,6 +211,7 @@ int main() {
     printf("\n");
 
     int arr2[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("bubble sort \n");
     ts.bubbleSort(arr2, SMALL_ARRAY_SIZE);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr2[i]);
@@ -216,6 +219,7 @@ int main() {
     printf("\n");
 
     int arr3[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("insert sort \n");
     ts.insertSort(arr3, SMALL_ARRAY_SIZE);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr3[i]);
@@ -223,6 +227,7 @@ int main() {
     printf("\n");
 
     int arr4[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("quick sort \n");
     ts.quickSort(arr4, 0, SMALL_END_IDX);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr4[i]);
@@ -230,6 +235,7 @@ int main() {
     printf("\n");
 
     int arr5[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("merge sort \n");
     ts.mergeSort(arr5, 0, SMALL_END_IDX);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr5[i]);
@@ -238,6 +244,7 @@ int main() {
 
 
     int arr6[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    printf("heap sort \n");
     ts.heapSort_simple(arr6, SMALL_ARRAY_SIZE);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr6[i]);
@@ -246,6 +253,7 @@ int main() {
 
 
     int arr7[SMALL_ARRAY_SIZE] = {413, 2, 14, 1643, 237, 6642, 5123};
+    printf("radix sort \n");
     ts.radixSort(arr7, SMALL_ARRAY_SIZE, 4);
     for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
         printf("%d ", arr7[i]);

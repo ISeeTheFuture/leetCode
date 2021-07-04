@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <queue>
 
 
 class testSort {
@@ -117,8 +118,7 @@ public:
 
 // quickSort
 private:
-    int Partition(int arr[], int left, int right)
-    {
+    int Partition(int* arr, int left, int right) {
         int pivot = arr[left];    // 피벗의 시작 : 가장 왼쪽 
         int low = left+1;
         int high = right;
@@ -140,8 +140,7 @@ private:
     }
 
 public:
-    void quickSort(int arr[], int left, int right)
-    {
+    void quickSort(int* arr, int left, int right) {
         if(left < right)
         {
             int pivot = Partition(arr, left, right);    // 반으로 나눈다.
@@ -149,7 +148,52 @@ public:
             quickSort(arr, pivot+1, right);    // 오른쪽 정렬
         }
     }
+
+// heapSort heap 구현 없이.
+public:
+    void heapSort_simple(int* arr, int n) {
+        std::priority_queue<int> heap;
+        for(int i = 0; i < n; i++) {
+            heap.push(arr[i]);
+        }
+
+        for(int i = 0; i < n; i++) {
+            arr[i] = heap.top();
+            heap.pop();
+        }
+    }
+
+// radixSort
+    void radixSort(int* arr, int n, int maxLength) {
+        const int BUCKET_DECIMAL = 10;
+
+        std::queue<int> buckets[BUCKET_DECIMAL];
+        int radix; // 기수. 10진법이므로 0~9
+        int factorial = 1;
+
+        for(int i = 0; i < maxLength; i++) {
+            
+            // 정렬할 배열로부터 버킷에 저장.
+            for(int j = 0; j < n; j++) {
+                radix = (arr[j] / factorial) % 10;
+                buckets[radix].push(arr[j]);
+            }
+
+            // 버킷에 있는 일부만 정렬된 데이터들을 다시 배열로 옮긴다.
+            for(int j, k = 0; j < BUCKET_DECIMAL; j++) {
+                while(!buckets[j].empty()) {
+                    arr[k++] = buckets[j].front();
+                    buckets[j].pop();
+                }
+            }
+
+            // 다음 자리수를 기준으로 정렬하기 위해
+            factorial *= 10;
+        }
+
+    }
 };
+
 
 // Driver code 
 int main() {
@@ -193,8 +237,22 @@ int main() {
     printf("\n");
 
 
+    int arr6[SMALL_ARRAY_SIZE] = {3, 2, 4, 1, 7, 6, 5};
+    ts.heapSort_simple(arr6, SMALL_ARRAY_SIZE);
+    for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
+        printf("%d ", arr6[i]);
+    }
+    printf("\n");
+
+
+    int arr7[SMALL_ARRAY_SIZE] = {413, 2, 14, 1643, 237, 6642, 5123};
+    ts.radixSort(arr7, SMALL_ARRAY_SIZE, 4);
+    for(int i = 0; i < SMALL_ARRAY_SIZE; i++) {
+        printf("%d ", arr7[i]);
+    }
+    printf("\n");
+
+
 // 좀 키워서
-
-
     return 0;
 }
